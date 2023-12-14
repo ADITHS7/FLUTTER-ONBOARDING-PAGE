@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 //import 'package:flare_flutter/flare_flutter.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,11 +31,13 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                    alignment: Alignment.center,
+                    padding: EdgeInsets.only(top: 90),
                     height: 400,
                     child:
-                        Image.asset('lib/Assets/cover-removebg-preview.png')),
-                SizedBox(
+                        // Image.asset('lib/Assets/cover-removebg-preview.png')
+                        Lottie.network(
+                            'https://lottie.host/7c863fe7-f1b3-4459-ba54-d184ea421009/QU1gxtK6yO.json')),
+                const SizedBox(
                   height: 50,
                 ),
                 Container(
